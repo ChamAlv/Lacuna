@@ -15,7 +15,7 @@ public class NinjaRenderer extends MobRenderer<NinjaEntity, NinjaModel<NinjaEnti
 
     @Override
     public ResourceLocation getTextureLocation(NinjaEntity pEntity) {
-        return new ResourceLocation(Lacuna.MODID, "textures/entities/ninja.png");
+        return new ResourceLocation(Lacuna.MODID, "textures/entity/ninja.png");
     }
 
     @Override

@@ -22,6 +22,7 @@ public class LacunaCreativeTabs {
             .title(Component.translatable("creativetab.lacuna_tab")) //Sets the name of the tab (in the resources folder)
             .displayItems((pParameters, pOutput) -> { //Adds items into the tab
                 pOutput.accept(LacunaItems.CACA_FLAKE.get());
+                pOutput.accept(LacunaItems.NINJA_SPAWN_EGG.get());
                 pOutput.accept(LacunaBlocks.CACA_BLOCK.get());
                 pOutput.accept(LacunaBlocks.CACA_ORE.get());
             }
