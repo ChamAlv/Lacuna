@@ -46,6 +46,7 @@ public class LacunaRecipeProvider extends RecipeProvider implements IConditionBu
                 .pattern("OOO")
                 .define('O', Blocks.BLACK_WOOL.asItem())
                 .define('X', LacunaBlocks.CACA_BLOCK.get())
+                .unlockedBy(getHasName(LacunaBlocks.CACA_BLOCK.get()), has(LacunaBlocks.CACA_BLOCK.get()))
                 .save(pWriter);
     }
 
