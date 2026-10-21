@@ -109,7 +109,7 @@ public class NinjaEntity extends Monster {
 
     }
 
-    public static AttributeSupplier.Builder CreateAttributes() {
+    public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MOVEMENT_SPEED, (double) .25f)
                 .add(Attributes.MAX_HEALTH, 20D)

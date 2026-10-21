@@ -1,5 +1,6 @@
 package com.cham.lacuna;
 
+import com.cham.lacuna.entities.LacunaEntities;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
@@ -25,7 +26,7 @@ import static com.cham.lacuna.items.LacunaItems.ITEMS;
 public class Lacuna
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "assets/lacuna";
+    public static final String MODID = "lacuna";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -42,6 +43,8 @@ public class Lacuna
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod events bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
+        // Register the Deferred Register to the mod events bus so entities get registered
+        LacunaEntities.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

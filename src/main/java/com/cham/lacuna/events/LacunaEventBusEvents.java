@@ -8,11 +8,18 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Lacuna.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(
+        modid = Lacuna.MODID,
+        bus = Mod.EventBusSubscriber.Bus.MOD
+)
+
 public class LacunaEventBusEvents {
 
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event){
-        event.put(LacunaEntities.NINJA.get(), NinjaEntity.CreateAttributes().build());
+        event.put(
+                LacunaEntities.NINJA.get(),
+                NinjaEntity.createAttributes().build()
+        );
     }
 }
